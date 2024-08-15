@@ -1,0 +1,38 @@
+// *Note* comments are not permitted so remove these comments when you get here
+// package.json file contains metadata about your project and dependencies
+
+{
+    "name": "cdac-alumni",
+    "version": "1.0.0",
+    "description": "CDAC Alumni Association Web Application",
+    "main": "index.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "dev": "nodemon server/server.js",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "dependencies": {
+      "express": "^4.17.2",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-redux": "^7.2.6"
+      // Add other dependencies as needed
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.15"
+      // Add development dependencies as needed
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yourusername/cdac-alumni.git"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/yourusername/cdac-alumni/issues"
+    },
+    "homepage": "https://github.com/yourusername/cdac-alumni#readme"
+  }
+  

@@ -1,0 +1,325 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f68b1f;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-box, aside {
+    flex: 1 1 calc(50% - 40px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#sidebar {
+    flex: 1 1 100%;
+}
+
+.btn-social {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.facebook { background-color: #3b5998; }
+.linkedin { background-color: #0077b5; }
+.google { background-color: #db4437; }
+
+<!--  -->
+
+#welcome-note {
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.scroll-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    position: absolute;
+    top: 0;
+    animation: scrollUp 10s linear infinite;
+}
+
+.scroll-content img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes scrollUp {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+<!--  -->
+
+.jobs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.jobs-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.jobs-list a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.company-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+#news-updates {
+    /* Your existing styles for content boxes */
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.scroll-container {
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    animation: scrollLeft 10s linear infinite;
+}
+
+.news-item {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    margin-right: 20px; /* Spacing between news items */
+}
+
+.news-item img {
+    width: 100%;
+    display: block;
+}
+
+.news-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+#distinguished-alumni {
+    /* Your existing styles for content boxes */
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.testimonials {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0;
+}
+
+.testimonial {
+    flex: 0 0 300px; /* Adjust width of each testimonial */
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.testimonial h4 {
+    margin-top: 0;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio (16:9) */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#latest-members {
+    /* Your existing styles for content boxes */
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.members-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Align items horizontally centered */
+}
+
+.members-list li {
+    width: calc(20% - 20px); /* Adjust width as needed for responsiveness */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    flex: 1 1 200px; /* Ensure equal width items; adjust width as needed */
+    max-width: 200px; /* Limit maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px; /* Adjust size of profile pictures */
+    height: 100px;
+    border-radius: 50%; /* Make profile pictures circular */
+    margin-bottom: 10px; /* Spacing between profile picture and info */
+}
+
+.member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.member-info h4 {
+    margin: 5px 0;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.member-info p {
+    margin: 5px 0;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.linkedin-icon {
+    width: 24px; /* Adjust size of LinkedIn icon */
+    height: 24px;
+    margin-left: 5px; /* Adjust spacing between name and LinkedIn icon */
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f68b1f;
+    padding: 10px 20px;
+}
+
+.follow-us {
+    display: flex;
+    gap: 10px;
+}
+
+.follow-us a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.follow-us a:hover {
+    color: #ccc; /* Change color on hover if desired */
+}
