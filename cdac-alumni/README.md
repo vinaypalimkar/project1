@@ -50,7 +50,7 @@ Welcome to the CDAC Alumni Association Web Application! This application serves 
 2. Open your browser and navigate to `http://localhost:3000` to view the application.
 
 ### Deployment
-
+deawda
 - The application is automatically deployed using Vercel for the frontend and Render for the backend.
 
 ### Contributing
