@@ -1,0 +1,14 @@
+.NewsContainer {
+  display: flex;
+  border: '5px solid green';
+  height: 80%;
+  background-image: url('https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .2;
+  background-blend-mode: overlay;
+}
+
+.NewsContent {
+  margin-top: 20%;
+}
