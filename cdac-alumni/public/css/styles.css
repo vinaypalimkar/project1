@@ -3,18 +3,71 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #9ab0bb;
+}
+body {
+    background-image: url('img_girl.jpg');
+  }
+
+:root {
+    --primary-color: #333; /* Define the variable using CSS custom properties (variables)*/
 }
 
-.header-content {
+.header-upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-color); /* Use the variable */
+}
+
+.logo {
+    margin-left: 10%;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    background-color: #a9cfac;
+    padding: 10px 20px;
+}
+
+.header-right { 
+    background-color: #9ca2b6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    border: #000000;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.follow-us {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.follow-us a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.follow-us a:hover {
+    color: #381ae4; /* Change color on hover if desired */
+}
+
+.nav-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f68b1f;
     padding: 10px 20px;
-}
-
-.logo {
-    height: 50px;
 }
 
 nav ul {
@@ -31,11 +84,8 @@ nav ul li a {
     font-weight: bold;
 }
 
-.auth-links a {
-    text-decoration: none;
-    color: white;
-    margin-left: 10px;
-}
+
+<!-- -->
 
 main {
     padding: 20px;
@@ -47,15 +97,50 @@ main {
     gap: 20px;
 }
 
-.content-box, aside {
+.content-box{
     flex: 1 1 calc(50% - 40px);
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 5px;
 }
 
+#welcome-note {
+    flex: 0 0 70%;  
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.scroll-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    position: absolute;
+    top: 0;
+    animation: scrollLeft 10s linear infinite;
+}
+
+.scroll-content img {
+    width: 100%;
+    display: block;
+}
+
 #sidebar {
-    flex: 1 1 100%;
+   /* Your existing styles for content boxes */
+   height: 300px; /* Adjust as needed */
+   flex: 0 0 25%;
+   overflow: hidden;
+   position: relative;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   padding: 10px;
+    
 }
 
 .btn-social {
@@ -74,7 +159,10 @@ main {
 
 <!--  -->
 
-#welcome-note {
+
+#jobs-internships {
+    /* Your existing styles for content boxes */
+    flex: 0 0 60%;
     height: 300px; /* Adjust as needed */
     overflow: hidden;
     position: relative;
@@ -83,65 +171,31 @@ main {
     padding: 10px;
 }
 
-.scroll-container {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.scroll-content {
-    position: absolute;
-    top: 0;
-    animation: scrollUp 10s linear infinite;
-}
-
-.scroll-content img {
-    width: 100%;
-    display: block;
-}
-
-@keyframes scrollUp {
-    0% {
-        top: 100%;
-    }
-    100% {
-        top: -100%;
-    }
-}
-
-<!--  -->
-
-.jobs-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.jobs-list li {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.jobs-list a {
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
+.card-title {
     font-weight: bold;
 }
 
-.company-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.card-link {
+    text-decoration: none;
+    color: #007bff;
 }
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+
 
 
 #news-updates {
     /* Your existing styles for content boxes */
     height: 300px; /* Adjust as needed */
+    flex: 0 0 30%;
     overflow: hidden;
     position: relative;
     border: 1px solid #ddd;
@@ -190,10 +244,10 @@ main {
     }
 }
 
-
 #distinguished-alumni {
     /* Your existing styles for content boxes */
     height: 300px; /* Adjust as needed */
+    flex: 0 0 100%;
     overflow: hidden;
     position: relative;
     border: 1px solid #ddd;
@@ -201,30 +255,98 @@ main {
     padding: 10px;
 }
 
+.one-piece {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .testimonials {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    height: 100%;
     display: flex;
-    gap: 20px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
 }
 
-.testimonial {
-    flex: 0 0 300px; /* Adjust width of each testimonial */
-    border: 1px solid #ddd;
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%; /* Each container takes 50% of the width */
+    height: 250px; /* Fixed height */
+    background-color: #1a1a1a;
+    margin: 10px; /* Add some margin between the two boxes */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content1 {
     padding: 10px;
+    width: 50%; /* Adjust the content width to half of the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.testimonial h4 {
-    margin-top: 0;
-}
-
-.testimonial p {
+.title1 {
+    font-size: 1.8em;
     margin-bottom: 10px;
+}
+
+.details1 {
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+}
+
+.details1 span {
+    margin-right: 10px;
+}
+
+.description1 {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.play-button {
+    display: inline-block;
+    background-color: #6A0DAD;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.play-button:hover {
+    background-color: #9333ea;
+}
+
+.image-container1 iframe{
+    width: 50%; /* Adjust image container to half of the container */
+    display: flex;
+    align-items: center;
+    height: 100%; /* Match the height of the container */
+}
+
+.show-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-container {
     position: relative;
-    width: 100%;
+    width: 50%;
+    height: 250px;
     padding-top: 56.25%; /* Aspect ratio (16:9) */
     overflow: hidden;
 }
@@ -234,13 +356,13 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
 }
-
 
 #latest-members {
     /* Your existing styles for content boxes */
-    height: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    flex: 0 0 100%;
     overflow: hidden;
     position: relative;
     border: 1px solid #ddd;
@@ -249,77 +371,159 @@ main {
 }
 
 .members-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Align items horizontally centered */
-}
-
-.members-list li {
-    width: calc(20% - 20px); /* Adjust width as needed for responsiveness */
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    flex: 1 1 200px; /* Ensure equal width items; adjust width as needed */
-    max-width: 200px; /* Limit maximum width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile-pic {
-    width: 100px; /* Adjust size of profile pictures */
-    height: 100px;
-    border-radius: 50%; /* Make profile pictures circular */
-    margin-bottom: 10px; /* Spacing between profile picture and info */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Align items horizontally centered */
 }
 
 .member-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .member-info h4 {
-    margin: 5px 0;
-    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .member-info p {
-    margin: 5px 0;
-    font-size: 14px; /* Adjust font size as needed */
+    font-size: 14px;
+    color: #666;
 }
 
 .linkedin-icon {
-    width: 24px; /* Adjust size of LinkedIn icon */
-    height: 24px;
-    margin-left: 5px; /* Adjust spacing between name and LinkedIn icon */
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+@media (max-width: 1200px) {
+    .members-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f68b1f;
-    padding: 10px 20px;
+@media (max-width: 992px) {
+    .members-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.follow-us {
-    display: flex;
-    gap: 10px;
+@media (max-width: 768px) {
+    .members-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.follow-us a {
-    color: white;
+@media (max-width: 576px) {
+    .members-list {
+        grid-template-columns: 1fr;
+    }
+}
+#latest-members .members-list {
+    transition: transform 0.5s;
+}
+
+#latest-members .member-list:hover {
+    transform: scale(1.1);
+}
+
+/* Footer animation */
+footer {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Header animation */
+#header {
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Add CSS reset or normalization */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Use a preprocessor or CSS framework */
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links a {
     text-decoration: none;
-    font-size: 1.5rem;
+    color: #666;
 }
 
-.follow-us a:hover {
-    color: #ccc; /* Change color on hover if desired */
+.footer-links a:hover {
+    color: #333;
 }
+
+.mobile-app-download-wrapper {
+    margin-top: 20px;
+}
+
+.go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.go-top:hover {
+    color: #666;
+}
+
+.feedback-corner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.feedback-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-modal.show {
+    display: block;
+}
+
+
+
